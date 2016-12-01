@@ -7,3 +7,12 @@ add AllowUsers zootanka
 
 /etc/ssh/ssh_config
 enable Port 22
+
+netstat -anp | grep sshd
+
+ufw verbose
+
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+ssh-keygen -t rsa
+ssh-copy-id zootanka@192.168.1.13
